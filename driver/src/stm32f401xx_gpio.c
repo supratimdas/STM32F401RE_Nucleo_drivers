@@ -198,7 +198,7 @@ uint8_t GPIO_IRQNumber(GPIO_Handle_t * gpioHandle) {
  */
 
 void	GPIO_IRQ_Config(GPIO_Handle_t* gpioHandle, uint8_t en) {
-	int IRQNumber = GPIO_IRQNumber(gpioHandle);
+	uint8_t IRQNumber = GPIO_IRQNumber(gpioHandle);
 
 	if(en) {
 		if(IRQNumber <= 31) {

@@ -171,7 +171,7 @@ typedef struct {
 
 typedef struct {
     volatile uint32_t   CR1;
-    uint32_t            RSVD0;
+    volatile uint32_t	CR2;
     volatile uint32_t   SR;
     volatile uint32_t   DR;
     volatile uint32_t   CRCPR;
@@ -185,6 +185,33 @@ typedef struct {
 #define SPI2 ((SPI_RegDef_t*)SPI2_BASEADDR)
 #define SPI3 ((SPI_RegDef_t*)SPI3_BASEADDR)
 #define SPI4 ((SPI_RegDef_t*)SPI4_BASEADDR)
+
+//SPI Register Bit Fields
+#define SPICR1_CPHA			0
+#define SPICR1_CPOL 		1
+#define SPICR1_MSTR 		2
+#define SPICR1_BR_LSB		3
+#define SPICR1_BR_MSB		5
+#define SPICR1_SPE			6
+#define SPICR1_LSB_FIRST	7
+#define SPICR1_SSI			8
+#define SPICR1_SSM			9
+#define SPICR1_RXONLY		10
+#define SPICR1_DFF			11
+#define SPICR1_CRC_NEXT		12
+#define SPICR1_CRC_EN		13
+#define SPICR1_BIDI_OE		14
+#define SPICR1_BIDI_MODE	15
+
+#define SPISR_RXNE			0
+#define SPISR_TXE			1
+#define SPISR_CHSIDE		2
+#define SPISR_UDR			3
+#define SPISR_CRC_ERR		4
+#define SPISR_MODF			5
+#define SPISR_OVR			6
+#define SPISR_BSY			7
+#define SPISR_FRE			8
 
 /*Clock Enable Macro*/
 
